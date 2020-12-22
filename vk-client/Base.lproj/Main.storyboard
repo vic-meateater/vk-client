@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,14 +15,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kpf-EP-dK6">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kpf-EP-dK6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MWZ-RX-dhe">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="813.33333333333337"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qOa-N0-fmv">
-                                                <rect key="frame" x="103.5" y="333" width="207" height="148"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alternate VK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1jd-t5-DQ3">
+                                                <rect key="frame" x="144.66666666666666" y="752" width="124.99999999999997" height="26.333333333333371"/>
+                                                <fontDescription key="fontDescription" name="Thonburi" family="Thonburi" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="qOa-N0-fmv">
+                                                <rect key="frame" x="103.66666666666669" y="399" width="207" height="157"/>
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Телефон или email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JLT-aa-I2b">
                                                         <rect key="frame" x="0.0" y="0.0" width="207" height="34"/>
@@ -36,10 +41,11 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbR-I5-PQe">
-                                                        <rect key="frame" x="41.5" y="118" width="124" height="30"/>
+                                                        <rect key="frame" x="41.333333333333329" y="118" width="123.99999999999999" height="39"/>
                                                         <color key="backgroundColor" red="0.098575644200000007" green="0.43096798660000002" blue="0.77905982730000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="Thonburi-Bold" family="Thonburi" pointSize="20"/>
                                                         <state key="normal" title="Войти">
-                                                            <color key="titleColor" red="0.79992312190000003" green="0.80005550380000001" blue="0.79989498849999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="titleShadowColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                     </button>
@@ -48,35 +54,51 @@
                                                     <constraint firstItem="Gfv-U8-7P5" firstAttribute="width" secondItem="JLT-aa-I2b" secondAttribute="width" id="Hdx-qy-VVo"/>
                                                 </constraints>
                                             </stackView>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="28c-v9-8mp">
+                                                <rect key="frame" x="103.66666666666669" y="78" width="207" height="207"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="207" id="YNT-da-TDF"/>
+                                                    <constraint firstAttribute="width" constant="207" id="ey2-Bm-BvC"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                        <color key="backgroundColor" red="0.93717283009999997" green="0.93730741740000001" blue="0.93714338539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstItem="vbR-I5-PQe" firstAttribute="width" secondItem="MWZ-RX-dhe" secondAttribute="width" multiplier="0.3" id="270-0a-7pU"/>
+                                            <constraint firstItem="1jd-t5-DQ3" firstAttribute="centerX" secondItem="MWZ-RX-dhe" secondAttribute="centerX" id="ClM-tp-wze"/>
+                                            <constraint firstItem="1jd-t5-DQ3" firstAttribute="top" secondItem="qOa-N0-fmv" secondAttribute="bottom" constant="196" id="WT7-HR-LEr"/>
+                                            <constraint firstItem="qOa-N0-fmv" firstAttribute="top" secondItem="28c-v9-8mp" secondAttribute="bottom" constant="114" id="bRb-78-gM7"/>
                                             <constraint firstItem="JLT-aa-I2b" firstAttribute="width" secondItem="MWZ-RX-dhe" secondAttribute="width" multiplier="0.5" id="rsa-Qa-EHf"/>
+                                            <constraint firstItem="28c-v9-8mp" firstAttribute="top" secondItem="MWZ-RX-dhe" secondAttribute="top" constant="78" id="s4H-5J-ZjC"/>
+                                            <constraint firstAttribute="bottom" secondItem="1jd-t5-DQ3" secondAttribute="bottom" constant="35" id="sgA-dx-krI"/>
                                             <constraint firstItem="qOa-N0-fmv" firstAttribute="centerX" secondItem="MWZ-RX-dhe" secondAttribute="centerX" id="wb4-Xe-eqM"/>
+                                            <constraint firstItem="28c-v9-8mp" firstAttribute="centerX" secondItem="MWZ-RX-dhe" secondAttribute="centerX" id="yOl-xJ-mZq"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="MWZ-RX-dhe" firstAttribute="leading" secondItem="Heo-V0-y19" secondAttribute="leading" id="7fQ-61-8Sn"/>
-                                    <constraint firstItem="MWZ-RX-dhe" firstAttribute="trailing" secondItem="Heo-V0-y19" secondAttribute="trailing" id="XBi-Oy-2fL"/>
-                                    <constraint firstItem="MWZ-RX-dhe" firstAttribute="top" secondItem="Heo-V0-y19" secondAttribute="top" id="bYK-HF-4nm"/>
-                                    <constraint firstItem="Heo-V0-y19" firstAttribute="bottom" secondItem="MWZ-RX-dhe" secondAttribute="bottom" id="qSR-g0-YNS"/>
+                                    <constraint firstItem="MWZ-RX-dhe" firstAttribute="leading" secondItem="Kpf-EP-dK6" secondAttribute="leading" id="7fQ-61-8Sn"/>
+                                    <constraint firstItem="MWZ-RX-dhe" firstAttribute="trailing" secondItem="Kpf-EP-dK6" secondAttribute="trailing" id="XBi-Oy-2fL"/>
+                                    <constraint firstItem="MWZ-RX-dhe" firstAttribute="top" secondItem="Kpf-EP-dK6" secondAttribute="top" id="bYK-HF-4nm"/>
+                                    <constraint firstAttribute="bottom" secondItem="MWZ-RX-dhe" secondAttribute="bottom" constant="44" id="qSR-g0-YNS"/>
                                 </constraints>
                                 <viewLayoutGuide key="contentLayoutGuide" id="yRe-mU-J8I"/>
                                 <viewLayoutGuide key="frameLayoutGuide" id="Heo-V0-y19"/>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.93717283009999997" green="0.93730741740000001" blue="0.93714338539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="Kpf-EP-dK6" secondAttribute="bottom" id="E47-ta-YEX"/>
-                            <constraint firstItem="Kpf-EP-dK6" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="EmT-fs-Lsl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Kpf-EP-dK6" secondAttribute="bottom" id="E47-ta-YEX"/>
+                            <constraint firstItem="Kpf-EP-dK6" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="EmT-fs-Lsl"/>
                             <constraint firstItem="MWZ-RX-dhe" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Unu-dR-PCb"/>
-                            <constraint firstItem="Kpf-EP-dK6" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="ehr-cf-Rk4"/>
-                            <constraint firstItem="Kpf-EP-dK6" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rmC-ey-GLi"/>
+                            <constraint firstItem="Kpf-EP-dK6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="ehr-cf-Rk4"/>
+                            <constraint firstItem="Kpf-EP-dK6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="rmC-ey-GLi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="scrollView" destination="Kpf-EP-dK6" id="69O-ge-QJB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -84,11 +106,6 @@
         </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="logo" width="682" height="682"/>
     </resources>
 </document>
