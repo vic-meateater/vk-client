@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  vk-client
 //
-//  Created by Vict on 21.12.2020.
+//  Created by Vic on 21.12.2020.
 //
 
 import UIKit

@@ -51,9 +51,16 @@
                                                             <color key="titleShadowColor" red="0.99990516900000004" green="1" blue="0.99987047910000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
+                                                            <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iTR-yy-SQ7"/>
                                                             <segue destination="t6y-hx-7R3" kind="presentation" id="REg-8r-Ekt"/>
                                                         </connections>
                                                     </button>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOGIN ERROR!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ViK-af-SJD">
+                                                        <rect key="frame" x="31.333333333333329" y="157" width="144" height="0.0"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                        <color key="textColor" systemColor="systemPinkColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <constraints>
                                                     <constraint firstItem="Gfv-U8-7P5" firstAttribute="width" secondItem="JLT-aa-I2b" secondAttribute="width" id="Hdx-qy-VVo"/>
@@ -104,6 +111,9 @@
                     <tabBarItem key="tabBarItem" title="Item" id="1Pm-I2-UlL"/>
                     <navigationItem key="navigationItem" id="nEz-gP-H24"/>
                     <connections>
+                        <outlet property="errorLable" destination="ViK-af-SJD" id="WUp-KT-2W6"/>
+                        <outlet property="loginTextField" destination="JLT-aa-I2b" id="83c-gz-g5s"/>
+                        <outlet property="passwordTextField" destination="Gfv-U8-7P5" id="KMW-Y6-Veb"/>
                         <outlet property="scrollView" destination="Kpf-EP-dK6" id="69O-ge-QJB"/>
                     </connections>
                 </viewController>
@@ -111,7 +121,7 @@
             </objects>
             <point key="canvasLocation" x="2902.898550724638" y="101.78571428571428"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Друзья-->
         <scene sceneID="B0L-ww-Nse">
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="SxP-Sa-2W8" sceneMemberID="viewController">
@@ -127,7 +137,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                <connections>
+                                    <segue destination="SqN-ix-AgO" kind="show" id="MLq-Zh-tGI"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -135,10 +147,7 @@
                             <outlet property="delegate" destination="SxP-Sa-2W8" id="hyK-BA-VnX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="i0s-cR-MgQ"/>
-                    <connections>
-                        <segue destination="SqN-ix-AgO" kind="show" id="HVI-ZY-mUt"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Друзья" id="i0s-cR-MgQ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5a-dF-9zE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -166,7 +175,6 @@
                                     <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </collectionViewCellContentView>
-                                <color key="backgroundColor" systemColor="systemTealColor"/>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -186,6 +194,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="t6y-hx-7R3" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hlN-Ae-pTp">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -198,7 +207,7 @@
             </objects>
             <point key="canvasLocation" x="3822" y="102"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Группы-->
         <scene sceneID="7Wl-Gf-lJB">
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="7lT-Ix-1eH" sceneMemberID="viewController">
@@ -213,7 +222,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KdO-g9-MQA" id="PIh-pW-Go5">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" systemColor="systemPinkColor"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -222,16 +230,21 @@
                             <outlet property="delegate" destination="7lT-Ix-1eH" id="AYI-Pa-OFd"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="ThB-gE-d2s"/>
-                    <connections>
-                        <segue destination="oRk-Rx-als" kind="show" id="wMG-4p-ZgM"/>
-                    </connections>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Группы" id="ThB-gE-d2s">
+                        <barButtonItem key="rightBarButtonItem" title="Поиск" image="magnifyingglass" catalog="system" id="i6F-SM-1ff">
+                            <connections>
+                                <segue destination="oRk-Rx-als" kind="show" id="AZG-vC-XeA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPw-GH-McC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5648" y="498"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Глобальный поиск-->
         <scene sceneID="VK8-oZ-54i">
             <objects>
                 <tableViewController modalPresentationStyle="fullScreen" id="oRk-Rx-als" sceneMemberID="viewController">
@@ -246,7 +259,6 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kXp-X5-1F5" id="M0k-LY-2df">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
@@ -255,17 +267,17 @@
                             <outlet property="delegate" destination="oRk-Rx-als" id="f5E-Ea-WZ4"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="0yL-bZ-lwJ"/>
+                    <navigationItem key="navigationItem" title="Глобальный поиск" id="0yL-bZ-lwJ"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1Q-w5-nMz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6525" y="498"/>
         </scene>
-        <!--Item-->
+        <!--Группы-->
         <scene sceneID="tLE-Zw-PKg">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="cO6-PS-RYd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="SU7-lZ-9XZ"/>
+                    <tabBarItem key="tabBarItem" title="Группы" image="circle.grid.hex" catalog="system" id="SU7-lZ-9XZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8dc-yB-9gf">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -273,18 +285,18 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="7lT-Ix-1eH" kind="relationship" relationship="rootViewController" id="Te4-dE-h8D"/>
+                        <segue destination="7lT-Ix-1eH" kind="relationship" relationship="rootViewController" id="8Ih-qj-A2s"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="H5x-kY-xHN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4737.68115942029" y="497.54464285714283"/>
         </scene>
-        <!--Item-->
+        <!--Профиль-->
         <scene sceneID="Ssd-7C-iY5">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="p7J-jn-K5A" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="h7I-1M-1Nl"/>
+                    <tabBarItem key="tabBarItem" title="Профиль" image="person.circle" catalog="system" id="h7I-1M-1Nl"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DKc-bJ-uzu">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -301,21 +313,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="circle.grid.hex" catalog="system" width="128" height="112"/>
         <image name="logo" width="682" height="682"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.circle" catalog="system" width="128" height="121"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemGreenColor">
-            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemTealColor">
-            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
