@@ -14,8 +14,7 @@ class UserGroupTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userGroups = [
-        ]
+        userGroups = []
     }
     
     override func viewWillAppear(_ animated: Bool) {

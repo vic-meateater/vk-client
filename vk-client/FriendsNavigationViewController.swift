@@ -7,16 +7,16 @@
 
 import UIKit
 
-class NavViewController: UINavigationController {
+class FriendsNavigationViewController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.tabBarItem = UITabBarItem(title: "Друзья", image: UIImage(systemName: "person.3"), selectedImage: UIImage(systemName: "person.3.fill"))
 
         // Do any additional setup after loading the view.
     }
     override func viewWillAppear(_ animated: Bool) {
-        self.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person.fill"))
+
     }
     
 
