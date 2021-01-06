@@ -7,23 +7,28 @@
 
 import UIKit
 
-class FriendCollectionViewController: UICollectionViewController {
+class FriendCollectionViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
+    
 
+    @IBOutlet var collectionView: UICollectionView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
 
     }
     public var friendImages: String?
 
 
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
         return 1
     }
 
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? FriendCollectionViewCell{
     
             cell.friendFullImage.image = UIImage(named: friendImages ?? "")
@@ -31,8 +36,17 @@ class FriendCollectionViewController: UICollectionViewController {
         }
         return UICollectionViewCell()
     }
-
     
-
+//    @IBAction func tapOnLike(_ sender: Liker) {
+//        print(#function)
+//        func collectionView(_ collectionView:UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell{
+//            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as? FriendCollectionViewCell{
+//        
+//                cell.likesCounter.text = "12"
+//                return cell
+//            }
+//            return UICollectionViewCell()
+//        }
+//    }
     
 }

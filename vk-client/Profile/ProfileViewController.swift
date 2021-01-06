@@ -14,14 +14,6 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        profileImage.layer.cornerRadius = profileImage.frame.height / 2
-//        profileImage.layer.shadowColor = UIColor.black.cgColor
-//        profileImage.layer.shadowOffset = CGSize.zero
-//        profileImage.layer.shadowRadius = 10
-//        profileImage.layer.shadowOpacity = 0.8
-//        profileImage.layer.masksToBounds = true
-
 
 
     }

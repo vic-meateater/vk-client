@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C01DB9D25A5D807007E228E /* AlphabeticScrollUIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C01DB9C25A5D807007E228E /* AlphabeticScrollUIControl.swift */; };
 		1C166D17259723CC0010CB51 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166D16259723CC0010CB51 /* FriendsTableViewController.swift */; };
 		1C166D1B25972C830010CB51 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166D1A25972C830010CB51 /* FriendsTableViewCell.swift */; };
 		1C166D1E259867500010CB51 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166D1D2598674F0010CB51 /* FriendCollectionViewController.swift */; };
 		1C166D212598934D0010CB51 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166D202598934D0010CB51 /* FriendCollectionViewCell.swift */; };
 		1C6B0FA125A1B53400E74DBE /* ProfileNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6B0FA025A1B53400E74DBE /* ProfileNavigationViewController.swift */; };
 		1C6B0FA425A1B5D900E74DBE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6B0FA325A1B5D900E74DBE /* ProfileViewController.swift */; };
-		1C6B0FAE25A2281700E74DBE /* CustomProfileAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6B0FAD25A2281700E74DBE /* CustomProfileAvatarImageView.swift */; };
+		1C6B0FAE25A2281700E74DBE /* CustomAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6B0FAD25A2281700E74DBE /* CustomAvatarImageView.swift */; };
+		1C6B0FB225A340FA00E74DBE /* LikerUIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6B0FB125A340FA00E74DBE /* LikerUIControl.swift */; };
 		1C8E8650259AE76800136A7C /* UserGroupTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E864F259AE76800136A7C /* UserGroupTableViewCell.swift */; };
 		1C8E8653259AE7A100136A7C /* UserGroupTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E8652259AE7A100136A7C /* UserGroupTableViewController.swift */; };
 		1C8E8658259B396B00136A7C /* GlobalGroupsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8E8657259B396A00136A7C /* GlobalGroupsTableViewController.swift */; };
@@ -31,13 +33,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C01DB9C25A5D807007E228E /* AlphabeticScrollUIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabeticScrollUIControl.swift; sourceTree = "<group>"; };
 		1C166D16259723CC0010CB51 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		1C166D1A25972C830010CB51 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		1C166D1D2598674F0010CB51 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
 		1C166D202598934D0010CB51 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
 		1C6B0FA025A1B53400E74DBE /* ProfileNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationViewController.swift; sourceTree = "<group>"; };
 		1C6B0FA325A1B5D900E74DBE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		1C6B0FAD25A2281700E74DBE /* CustomProfileAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomProfileAvatarImageView.swift; sourceTree = "<group>"; };
+		1C6B0FAD25A2281700E74DBE /* CustomAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatarImageView.swift; sourceTree = "<group>"; };
+		1C6B0FB125A340FA00E74DBE /* LikerUIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LikerUIControl.swift; sourceTree = "<group>"; };
 		1C8E864F259AE76800136A7C /* UserGroupTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupTableViewCell.swift; sourceTree = "<group>"; };
 		1C8E8652259AE7A100136A7C /* UserGroupTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserGroupTableViewController.swift; sourceTree = "<group>"; };
 		1C8E8657259B396A00136A7C /* GlobalGroupsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalGroupsTableViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +71,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C01DB9B25A5D63B007E228E /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				1C6B0FB125A340FA00E74DBE /* LikerUIControl.swift */,
+				1C01DB9C25A5D807007E228E /* AlphabeticScrollUIControl.swift */,
+			);
+			path = Controls;
+			sourceTree = "<group>";
+		};
 		1C166D1925972C550010CB51 /* Сells */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,7 +96,7 @@
 			children = (
 				1C6B0FA025A1B53400E74DBE /* ProfileNavigationViewController.swift */,
 				1C6B0FA325A1B5D900E74DBE /* ProfileViewController.swift */,
-				1C6B0FAD25A2281700E74DBE /* CustomProfileAvatarImageView.swift */,
+				1C6B0FAD25A2281700E74DBE /* CustomAvatarImageView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -117,6 +130,7 @@
 		1CF5084625911145008A87D3 /* vk-client */ = {
 			isa = PBXGroup;
 			children = (
+				1C01DB9B25A5D63B007E228E /* Controls */,
 				1C6B0FAC25A227BF00E74DBE /* Profile */,
 				1CB5E667259C6C69006921F7 /* Model */,
 				1C166D1925972C550010CB51 /* Сells */,
@@ -206,9 +220,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C6B0FAE25A2281700E74DBE /* CustomProfileAvatarImageView.swift in Sources */,
+				1C6B0FAE25A2281700E74DBE /* CustomAvatarImageView.swift in Sources */,
 				1C6B0FA125A1B53400E74DBE /* ProfileNavigationViewController.swift in Sources */,
 				1CB5E669259C6CAB006921F7 /* user.swift in Sources */,
+				1C6B0FB225A340FA00E74DBE /* LikerUIControl.swift in Sources */,
 				1C166D212598934D0010CB51 /* FriendCollectionViewCell.swift in Sources */,
 				1CF5084C25911145008A87D3 /* LoginViewController.swift in Sources */,
 				1CF5084825911145008A87D3 /* AppDelegate.swift in Sources */,
@@ -222,6 +237,7 @@
 				1C8E8658259B396B00136A7C /* GlobalGroupsTableViewController.swift in Sources */,
 				1CF5084A25911145008A87D3 /* SceneDelegate.swift in Sources */,
 				1C166D17259723CC0010CB51 /* FriendsTableViewController.swift in Sources */,
+				1C01DB9D25A5D807007E228E /* AlphabeticScrollUIControl.swift in Sources */,
 				1CB5E66F259C76C9006921F7 /* friend.swift in Sources */,
 				1C166D1E259867500010CB51 /* FriendCollectionViewController.swift in Sources */,
 			);

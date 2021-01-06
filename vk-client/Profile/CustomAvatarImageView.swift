@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomProfileAvatarImageView: UIImageView {
+class CustomAvatarImageView: UIImageView {
 
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -18,13 +18,13 @@ class CustomProfileAvatarImageView: UIImageView {
 
 }
 
-class ProfileAvatarImageShadow: UIImageView{
+class ShadowAvatarImageView: UIImageView{
     override func layoutSubviews() {
         super.layoutSubviews()
      
         layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize.zero
-        layer.shadowRadius = 10
+        layer.shadowRadius = 5
         layer.shadowOpacity = 0.8
         layer.masksToBounds = false
         layer.cornerRadius = frame.height / 2
