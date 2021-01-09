@@ -7,11 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1C01DB9D25A5D807007E228E /* AlphabeticScrollUIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C01DB9C25A5D807007E228E /* AlphabeticScrollUIControl.swift */; };
+		1C01DB9D25A5D807007E228E /* AlphabeticSearchUIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C01DB9C25A5D807007E228E /* AlphabeticSearchUIControl.swift */; };
 		1C166D17259723CC0010CB51 /* FriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166D16259723CC0010CB51 /* FriendsTableViewController.swift */; };
 		1C166D1B25972C830010CB51 /* FriendsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166D1A25972C830010CB51 /* FriendsTableViewCell.swift */; };
 		1C166D1E259867500010CB51 /* FriendCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166D1D2598674F0010CB51 /* FriendCollectionViewController.swift */; };
 		1C166D212598934D0010CB51 /* FriendCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C166D202598934D0010CB51 /* FriendCollectionViewCell.swift */; };
+		1C2D41FE25A6FFCE0009E70A /* ContactListUIControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D41FD25A6FFCE0009E70A /* ContactListUIControl.swift */; };
+		1C2D420125A7069E0009E70A /* ContactsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2D420025A7069E0009E70A /* ContactsTableViewCell.swift */; };
 		1C6B0FA125A1B53400E74DBE /* ProfileNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6B0FA025A1B53400E74DBE /* ProfileNavigationViewController.swift */; };
 		1C6B0FA425A1B5D900E74DBE /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6B0FA325A1B5D900E74DBE /* ProfileViewController.swift */; };
 		1C6B0FAE25A2281700E74DBE /* CustomAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C6B0FAD25A2281700E74DBE /* CustomAvatarImageView.swift */; };
@@ -24,6 +26,7 @@
 		1CB5E66C259C6CBD006921F7 /* group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5E66B259C6CBD006921F7 /* group.swift */; };
 		1CB5E66F259C76C9006921F7 /* friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB5E66E259C76C9006921F7 /* friend.swift */; };
 		1CBA36EA25964C9B008201F3 /* FriendsNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CBA36E925964C9B008201F3 /* FriendsNavigationViewController.swift */; };
+		1CEF127925A6077B00E986D1 /* CustomFriendsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEF127825A6077B00E986D1 /* CustomFriendsTableViewController.swift */; };
 		1CF5084825911145008A87D3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF5084725911145008A87D3 /* AppDelegate.swift */; };
 		1CF5084A25911145008A87D3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF5084925911145008A87D3 /* SceneDelegate.swift */; };
 		1CF5084C25911145008A87D3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CF5084B25911145008A87D3 /* LoginViewController.swift */; };
@@ -33,11 +36,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		1C01DB9C25A5D807007E228E /* AlphabeticScrollUIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabeticScrollUIControl.swift; sourceTree = "<group>"; };
+		1C01DB9C25A5D807007E228E /* AlphabeticSearchUIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlphabeticSearchUIControl.swift; sourceTree = "<group>"; };
 		1C166D16259723CC0010CB51 /* FriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewController.swift; sourceTree = "<group>"; };
 		1C166D1A25972C830010CB51 /* FriendsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsTableViewCell.swift; sourceTree = "<group>"; };
 		1C166D1D2598674F0010CB51 /* FriendCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewController.swift; sourceTree = "<group>"; };
 		1C166D202598934D0010CB51 /* FriendCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCollectionViewCell.swift; sourceTree = "<group>"; };
+		1C2D41FD25A6FFCE0009E70A /* ContactListUIControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactListUIControl.swift; sourceTree = "<group>"; };
+		1C2D420025A7069E0009E70A /* ContactsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsTableViewCell.swift; sourceTree = "<group>"; };
 		1C6B0FA025A1B53400E74DBE /* ProfileNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNavigationViewController.swift; sourceTree = "<group>"; };
 		1C6B0FA325A1B5D900E74DBE /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		1C6B0FAD25A2281700E74DBE /* CustomAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAvatarImageView.swift; sourceTree = "<group>"; };
@@ -50,6 +55,7 @@
 		1CB5E66B259C6CBD006921F7 /* group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = group.swift; sourceTree = "<group>"; };
 		1CB5E66E259C76C9006921F7 /* friend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = friend.swift; sourceTree = "<group>"; };
 		1CBA36E925964C9B008201F3 /* FriendsNavigationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsNavigationViewController.swift; sourceTree = "<group>"; };
+		1CEF127825A6077B00E986D1 /* CustomFriendsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomFriendsTableViewController.swift; sourceTree = "<group>"; };
 		1CF5084425911145008A87D3 /* vk-client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "vk-client.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CF5084725911145008A87D3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CF5084925911145008A87D3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -75,7 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				1C6B0FB125A340FA00E74DBE /* LikerUIControl.swift */,
-				1C01DB9C25A5D807007E228E /* AlphabeticScrollUIControl.swift */,
+				1C01DB9C25A5D807007E228E /* AlphabeticSearchUIControl.swift */,
+				1C2D41FD25A6FFCE0009E70A /* ContactListUIControl.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -84,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				1C166D1A25972C830010CB51 /* FriendsTableViewCell.swift */,
+				1C2D420025A7069E0009E70A /* ContactsTableViewCell.swift */,
 				1C166D202598934D0010CB51 /* FriendCollectionViewCell.swift */,
 				1C8E865A259B398000136A7C /* GlobalGroupTableViewCell.swift */,
 				1C8E864F259AE76800136A7C /* UserGroupTableViewCell.swift */,
@@ -142,6 +150,7 @@
 				1C166D16259723CC0010CB51 /* FriendsTableViewController.swift */,
 				1CBA36E925964C9B008201F3 /* FriendsNavigationViewController.swift */,
 				1C8E8652259AE7A100136A7C /* UserGroupTableViewController.swift */,
+				1CEF127825A6077B00E986D1 /* CustomFriendsTableViewController.swift */,
 				1C8E8657259B396A00136A7C /* GlobalGroupsTableViewController.swift */,
 				1CF5085025911146008A87D3 /* Assets.xcassets */,
 				1CF5085225911146008A87D3 /* LaunchScreen.storyboard */,
@@ -229,15 +238,18 @@
 				1CF5084825911145008A87D3 /* AppDelegate.swift in Sources */,
 				1C8E8650259AE76800136A7C /* UserGroupTableViewCell.swift in Sources */,
 				1CB5E66C259C6CBD006921F7 /* group.swift in Sources */,
+				1CEF127925A6077B00E986D1 /* CustomFriendsTableViewController.swift in Sources */,
 				1C6B0FA425A1B5D900E74DBE /* ProfileViewController.swift in Sources */,
 				1CBA36EA25964C9B008201F3 /* FriendsNavigationViewController.swift in Sources */,
+				1C2D41FE25A6FFCE0009E70A /* ContactListUIControl.swift in Sources */,
 				1C166D1B25972C830010CB51 /* FriendsTableViewCell.swift in Sources */,
 				1C8E865B259B398000136A7C /* GlobalGroupTableViewCell.swift in Sources */,
 				1C8E8653259AE7A100136A7C /* UserGroupTableViewController.swift in Sources */,
+				1C2D420125A7069E0009E70A /* ContactsTableViewCell.swift in Sources */,
 				1C8E8658259B396B00136A7C /* GlobalGroupsTableViewController.swift in Sources */,
 				1CF5084A25911145008A87D3 /* SceneDelegate.swift in Sources */,
 				1C166D17259723CC0010CB51 /* FriendsTableViewController.swift in Sources */,
-				1C01DB9D25A5D807007E228E /* AlphabeticScrollUIControl.swift in Sources */,
+				1C01DB9D25A5D807007E228E /* AlphabeticSearchUIControl.swift in Sources */,
 				1CB5E66F259C76C9006921F7 /* friend.swift in Sources */,
 				1C166D1E259867500010CB51 /* FriendCollectionViewController.swift in Sources */,
 			);

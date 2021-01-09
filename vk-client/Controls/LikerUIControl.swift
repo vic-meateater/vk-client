@@ -32,11 +32,8 @@ class LikerUIControl: UIControl {
 
     private func setupUI() {
         likeButton = UIButton(type: UIButton.ButtonType.system)
-
-        //likeButton.setImage(UIImage(systemName: "suit.heart"), for: .normal)
         likeButton.tintColor = .black
         likeButton.setBackgroundImage(UIImage(systemName: "suit.heart"), for: .normal)
-        likeButton.setTitle("", for: .normal)
         likeButton.addTarget(self, action: #selector(checkLike), for: .touchUpInside)
         addSubview(likeButton)
      
