@@ -14,11 +14,9 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
     
     var friends: [friend]!
     var friendsDictionary = [String: [friend]]()
-    var friendsSectionTitles = [String]()
-    
+    var friendsSectionTitles = [String]()    
     var friendImage: UIImage!
-    private var nameFriend: String?
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,12 +26,12 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
     }
     override func viewWillAppear(_ animated: Bool){
         friends = [
-            friend(name: "Саша", avatar: "neo"),
-            friend(name: "Василиса", avatar: "trin"),
-            friend(name: "Петя", avatar: "morpheus"),
+            friend(name: "Саша", avatar: "neo", images: ["neo_1", "neo_2", "neo_3"]),
+            friend(name: "Василиса", avatar: "trin", images: ["trin_1", "trin_2", "trin_3"]),
+            friend(name: "Петя", avatar: "morpheus", images: ["morpheus_1", "morpheus_2"]),
             friend(name: "Иван", avatar: "noavatar"),
             friend(name: "Игорь", avatar: "noavatar"),
-            friend(name: "Smith", avatar: "noavatar"),
+            friend(name: "Smith", avatar: "smith_avatar", images: ["smith_1"]),
             friend(name: "Яхон", avatar: "noavatar"),
             friend(name: "Нори", avatar: "noavatar"),
             friend(name: "Жмых", avatar: "noavatar"),
@@ -62,7 +60,7 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
         guard let countFriendsInSection = friendsDictionary[friendsSectionTitles[section]]?.count else { return 0 }
         return countFriendsInSection
     }
-
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ContactsTableViewCell{
             let friendKey = friendsSectionTitles[indexPath.section]
@@ -78,25 +76,29 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return friendsSectionTitles[section]
     }
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fromCustomContactsVC"{
             if let destination = segue.destination as? FriendCollectionViewController{
                 let index = tableView.indexPathForSelectedRow
                 let friendKey = friendsSectionTitles[index?.section ?? 65536]
                 if let friendValues = friendsDictionary[friendKey]{
-                    let avatar = friendValues[index?.row ?? 65535].avatar
-                    destination.friendImages = avatar
+                    let avatar = friendValues[index?.row ?? 65535].images
+                    destination.friendImg = avatar
                 }
             }
         }
     }
-
+    
     @IBAction func alphbeticSearchCnanged(_ sender: AlphabeticSearchUIControl) {
         let indexPath = IndexPath(row: 0, section: friendsSectionTitles.firstIndex(of: sender.choosedLetter) ?? 0)
         tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         
     }
     
-
+    @IBAction func drugAlphabrticSearchView(_ sendex: UIGestureRecognizer){
+        print(#function)
+    }
+    
+    
 }

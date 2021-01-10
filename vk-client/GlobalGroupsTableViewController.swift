@@ -22,6 +22,7 @@ class GlobalGroupsTableViewController: UITableViewController {
             group(name: "GB_Network", image: "group_network"),
             group(name: "GB_Python", image: "group_python"),
             group(name: "GeekBrains", image: "group_gb"),
+            group(name: "GB_iOS", image: "group_ios"),
         ]
 
     }
@@ -38,9 +39,9 @@ class GlobalGroupsTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? GlobalGroupTableViewCell{
-            let sortedGroups = groups.sorted {$0.name < $1.name}
-            cell.globalGroupImage.image = UIImage(named: sortedGroups[indexPath.row].image)
-            cell.globalGroupLabel.text = sortedGroups[indexPath.row].name
+            //let sortedGroups = groups.sorted {$0.name < $1.name}
+            cell.globalGroupImage.image = UIImage(named: groups[indexPath.row].image)
+            cell.globalGroupLabel.text = groups[indexPath.row].name
             
             return cell
         }

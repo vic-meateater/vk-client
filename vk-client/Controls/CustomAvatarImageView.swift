@@ -20,14 +20,21 @@ class CustomAvatarImageView: UIImageView {
 
 class ShadowAvatarImageView: UIImageView{
     
+    @IBInspectable var color: UIColor = .black {
+        didSet {
+            layer.shadowColor = color.cgColor
+        }
+    }
     
-    
+    @IBInspectable var radius: CGFloat = 5 {
+        didSet {
+            layer.shadowRadius = radius
+        }
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        layer.shadowColor = UIColor.black.cgColor
         layer.shadowOffset = CGSize.zero
-        layer.shadowRadius = 5
         layer.shadowOpacity = 0.8
         layer.masksToBounds = false
         layer.cornerRadius = frame.height / 2

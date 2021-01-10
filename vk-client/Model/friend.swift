@@ -10,4 +10,5 @@ import UIKit
 struct friend {
     var name: String
     var avatar: String
+    var images: [String]? = ["no_image"]
 }

@@ -83,6 +83,7 @@
 				1C6B0FB125A340FA00E74DBE /* LikerUIControl.swift */,
 				1C01DB9C25A5D807007E228E /* AlphabeticSearchUIControl.swift */,
 				1C2D41FD25A6FFCE0009E70A /* ContactListUIControl.swift */,
+				1C6B0FAD25A2281700E74DBE /* CustomAvatarImageView.swift */,
 			);
 			path = Controls;
 			sourceTree = "<group>";
@@ -104,7 +105,6 @@
 			children = (
 				1C6B0FA025A1B53400E74DBE /* ProfileNavigationViewController.swift */,
 				1C6B0FA325A1B5D900E74DBE /* ProfileViewController.swift */,
-				1C6B0FAD25A2281700E74DBE /* CustomAvatarImageView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";

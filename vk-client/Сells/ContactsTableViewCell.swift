@@ -10,7 +10,6 @@ import UIKit
 class ContactsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var contactImageView: UIImageView!
-    
     @IBOutlet weak var contactName: UILabel!
     
     override func awakeFromNib() {

@@ -14,7 +14,7 @@ class UserGroupTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userGroups = []
+        userGroups = [group(name: "GB_iOS", image: "group_ios")]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -35,9 +35,9 @@ class UserGroupTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? UserGroupTableViewCell{
-            let sortedGroups = userGroups.sorted {$0.name < $1.name}
-            cell.userGroupNameLabel.text = sortedGroups[indexPath.row].name
-            cell.userGroupImage.image = UIImage(named: sortedGroups[indexPath.row].image)
+            //let sortedGroups = userGroups.sorted {$0.name < $1.name}
+            cell.userGroupNameLabel.text = userGroups[indexPath.row].name
+            cell.userGroupImage.image = UIImage(named: userGroups[indexPath.row].image)
             return cell
         }
         return UITableViewCell()

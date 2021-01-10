@@ -40,7 +40,6 @@ class LikerUIControl: UIControl {
     }
     
     @objc func checkLike(){
-        print(#function)
         if likeButton.backgroundImage(for: .normal) == UIImage(systemName: "suit.heart") {
             likeButton.tintColor = .red
             likeButton.setBackgroundImage(UIImage(systemName: "suit.heart.fill"), for: .normal)

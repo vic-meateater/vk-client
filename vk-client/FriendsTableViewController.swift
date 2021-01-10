@@ -14,7 +14,7 @@ class FriendsTableViewController: UITableViewController {
     var friendsSectionTitles = [String]()
     
     var friendImage: UIImage!
-    var nameFriend: String?
+    var friendImages: [String]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,12 +23,12 @@ class FriendsTableViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         friends = [
-            friend(name: "Саша", avatar: "neo"),
-            friend(name: "Василиса", avatar: "trin"),
-            friend(name: "Петя", avatar: "morpheus"),
+            friend(name: "Саша", avatar: "neo", images: ["neo_1", "neo_2", "neo_3"]),
+            friend(name: "Василиса", avatar: "trin", images: ["trin_1", "trin_2", "trin_3"]),
+            friend(name: "Петя", avatar: "morpheus", images: ["morpheus_1", "morpheus_2"]),
             friend(name: "Иван", avatar: "noavatar"),
             friend(name: "Игорь", avatar: "noavatar"),
-            friend(name: "Smith", avatar: "noavatar"),
+            friend(name: "Smith", avatar: "smith_avatar", images: ["smith_1"]),
             friend(name: "Яхон", avatar: "noavatar"),
             friend(name: "Нори", avatar: "noavatar"),
             friend(name: "Жмых", avatar: "noavatar"),
@@ -83,7 +83,7 @@ class FriendsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let friendKey = friendsSectionTitles[indexPath.section]
         if let friendValues = friendsDictionary[friendKey]{
-            nameFriend = friendValues[indexPath.row].avatar
+            friendImages = friendValues[indexPath.row].images!
         }
             performSegue(withIdentifier: "toFriendFullImageVC", sender: nil)
     }
@@ -92,7 +92,7 @@ class FriendsTableViewController: UITableViewController {
         switch segue.identifier{
         case "toFriendFullImageVC":
             if let destination = segue.destination as? FriendCollectionViewController{
-                destination.friendImages = nameFriend
+                destination.friendImg = friendImages
             }
         default:
             break

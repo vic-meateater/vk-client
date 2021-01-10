@@ -143,10 +143,10 @@
                                     <rect key="frame" x="0.0" y="0.0" width="201" height="201"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r9r-OT-SMV">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="r9r-OT-SMV">
                                             <rect key="frame" x="0.0" y="0.0" width="201" height="186"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="180" id="jTr-DY-bFy"/>
+                                                <constraint firstAttribute="width" constant="150" id="jTr-DY-bFy"/>
                                                 <constraint firstAttribute="width" secondItem="r9r-OT-SMV" secondAttribute="height" multiplier="1:1" id="tTK-eH-1Rf"/>
                                             </constraints>
                                         </imageView>
@@ -555,11 +555,11 @@
             </objects>
             <point key="canvasLocation" x="4738" y="-875"/>
         </scene>
-        <!--Самопал-->
+        <!--Контакты-->
         <scene sceneID="S7f-Ji-2DF">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YIx-lF-EDl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Самопал" image="trash.circle" catalog="system" id="ZxY-8a-uFf"/>
+                    <tabBarItem key="tabBarItem" title="Контакты" image="person.2.circle" catalog="system" id="ZxY-8a-uFf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Jox-NF-rGM">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -574,10 +574,10 @@
             </objects>
             <point key="canvasLocation" x="5676.811594202899" y="555.80357142857144"/>
         </scene>
-        <!--Contact ListUI Control-->
+        <!--Контакты-->
         <scene sceneID="yZ8-SX-zBQ">
             <objects>
-                <viewController id="VeV-EB-3gx" customClass="ContactListUIControl" customModule="vk_client" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Контакты" id="VeV-EB-3gx" customClass="ContactListUIControl" customModule="vk_client" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jJp-Mp-bTg">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -600,6 +600,14 @@
                                                         <constraint firstAttribute="width" constant="35" id="8SF-ar-mYe"/>
                                                         <constraint firstAttribute="height" constant="35" id="jnX-1F-sSR"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                                            <color key="value" systemColor="systemGreenColor"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                                            <real key="value" value="15"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hrP-Qg-QHG" customClass="CustomAvatarImageView" customModule="vk_client" customModuleProvider="target">
                                                     <rect key="frame" x="20" y="4.3333333333333321" width="35" height="35"/>
@@ -634,12 +642,14 @@
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VUj-L2-Zfi" customClass="AlphabeticSearchUIControl" customModule="vk_client" customModuleProvider="target">
                                 <rect key="frame" x="389" y="215.66666666666663" width="25" height="300"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="XQ8-oC-iYu"/>
                                     <constraint firstAttribute="width" secondItem="VUj-L2-Zfi" secondAttribute="height" multiplier="1:12" id="ww5-Ug-qYW"/>
                                 </constraints>
                                 <connections>
                                     <action selector="alphbeticSearchCnanged:" destination="VeV-EB-3gx" eventType="valueChanged" id="Hf2-Pg-7kE"/>
+                                    <outletCollection property="gestureRecognizers" destination="WdP-rI-boB" appends="YES" id="3TI-NC-KQe"/>
                                 </connections>
                             </view>
                         </subviews>
@@ -655,13 +665,19 @@
                             <constraint firstItem="VUj-L2-Zfi" firstAttribute="leading" secondItem="RAZ-Vt-IHZ" secondAttribute="trailing" constant="-25" id="utx-tE-QvJ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="pek-Ox-c9U"/>
+                    <navigationItem key="navigationItem" title="Контакты" id="pek-Ox-c9U"/>
                     <connections>
                         <outlet property="alphabeticSearchBar" destination="VUj-L2-Zfi" id="e13-vk-W6r"/>
                         <outlet property="tableView" destination="Gd4-AJ-H0P" id="x1M-mt-QpL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qyF-cY-m2O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="2" id="WdP-rI-boB">
+                    <scrollTypes key="allowedScrollTypesMask" discrete="YES"/>
+                    <connections>
+                        <action selector="drugAlphabrticSearchView:" destination="VeV-EB-3gx" id="ocj-dY-mxA"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="6524.6376811594209" y="555.97826086956525"/>
         </scene>
@@ -675,12 +691,15 @@
         <image name="group_ios" width="640" height="640"/>
         <image name="logo" width="682" height="682"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.2.circle" catalog="system" width="128" height="121"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="profile_image" width="128" height="128"/>
-        <image name="trash.circle" catalog="system" width="128" height="121"/>
         <image name="trin" width="530" height="706"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemPinkColor">
             <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
