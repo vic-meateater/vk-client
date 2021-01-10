@@ -16,8 +16,8 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
     var friendsDictionary = [String: [friend]]()
     var friendsSectionTitles = [String]()
     
-//    var friendImage: UIImage!
-//    var nameFriend: String?
+    var friendImage: UIImage!
+    private var nameFriend: String?
     
     
     override func viewDidLoad() {
@@ -25,7 +25,8 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
-        
+    }
+    override func viewWillAppear(_ animated: Bool){
         friends = [
             friend(name: "Саша", avatar: "neo"),
             friend(name: "Василиса", avatar: "trin"),
@@ -47,7 +48,6 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
                 friendsDictionary[friendKey] = [friend]
             }
         }
-        
         friendsSectionTitles = [String](friendsDictionary.keys)
         friendsSectionTitles = friendsSectionTitles.sorted(by: { $0 < $1 })
         alphabeticSearchBar.letters = friendsSectionTitles
@@ -76,19 +76,27 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        print(friendsSectionTitles)
         return friendsSectionTitles[section]
     }
-    
-//    func sectionIndexTitles(for tableView: UITableView) -> [String]? {
-//        return friendsSectionTitles
-//    }
-    
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "fromCustomContactsVC"{
+            if let destination = segue.destination as? FriendCollectionViewController{
+                let index = tableView.indexPathForSelectedRow
+                let friendKey = friendsSectionTitles[index?.section ?? 65536]
+                if let friendValues = friendsDictionary[friendKey]{
+                    let avatar = friendValues[index?.row ?? 65535].avatar
+                    destination.friendImages = avatar
+                }
+            }
+        }
+    }
+
     @IBAction func alphbeticSearchCnanged(_ sender: AlphabeticSearchUIControl) {
         let indexPath = IndexPath(row: 0, section: friendsSectionTitles.firstIndex(of: sender.choosedLetter) ?? 0)
         tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         
     }
     
-    
+
 }
