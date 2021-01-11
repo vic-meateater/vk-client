@@ -16,7 +16,7 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
     var friendsDictionary = [String: [friend]]()
     var friendsSectionTitles = [String]()    
     var friendImage: UIImage!
-
+    var friendsDataSource: FriendsDataSource!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,8 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
         tableView.dataSource = self
     }
     override func viewWillAppear(_ animated: Bool){
-        friends = [
-            friend(name: "Саша", avatar: "neo", images: ["neo_1", "neo_2", "neo_3"]),
-            friend(name: "Василиса", avatar: "trin", images: ["trin_1", "trin_2", "trin_3"]),
-            friend(name: "Петя", avatar: "morpheus", images: ["morpheus_1", "morpheus_2"]),
-            friend(name: "Иван", avatar: "noavatar"),
-            friend(name: "Игорь", avatar: "noavatar"),
-            friend(name: "Smith", avatar: "smith_avatar", images: ["smith_1"]),
-            friend(name: "Яхон", avatar: "noavatar"),
-            friend(name: "Нори", avatar: "noavatar"),
-            friend(name: "Жмых", avatar: "noavatar"),
-        ]
+        friendsDataSource = FriendsDataSource()
+        friends = friendsDataSource.getFriends()
         
         for friend in friends{
             let friendKey = String(friend.name.prefix(1))
@@ -49,7 +40,6 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
         friendsSectionTitles = [String](friendsDictionary.keys)
         friendsSectionTitles = friendsSectionTitles.sorted(by: { $0 < $1 })
         alphabeticSearchBar.letters = friendsSectionTitles
-        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {

@@ -12,7 +12,7 @@ class FriendsTableViewController: UITableViewController {
     var friends: [friend]!
     var friendsDictionary = [String: [friend]]()
     var friendsSectionTitles = [String]()
-    
+    var friendsDataSource: FriendsDataSource!
     var friendImage: UIImage!
     var friendImages: [String]!
     
@@ -22,17 +22,8 @@ class FriendsTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        friends = [
-            friend(name: "Саша", avatar: "neo", images: ["neo_1", "neo_2", "neo_3"]),
-            friend(name: "Василиса", avatar: "trin", images: ["trin_1", "trin_2", "trin_3"]),
-            friend(name: "Петя", avatar: "morpheus", images: ["morpheus_1", "morpheus_2"]),
-            friend(name: "Иван", avatar: "noavatar"),
-            friend(name: "Игорь", avatar: "noavatar"),
-            friend(name: "Smith", avatar: "smith_avatar", images: ["smith_1"]),
-            friend(name: "Яхон", avatar: "noavatar"),
-            friend(name: "Нори", avatar: "noavatar"),
-            friend(name: "Жмых", avatar: "noavatar"),
-        ]
+        friendsDataSource = FriendsDataSource()       
+        friends = friendsDataSource.getFriends()
         
         for friend in friends{
             let friendKey = String(friend.name.prefix(1))
@@ -46,7 +37,6 @@ class FriendsTableViewController: UITableViewController {
         
         friendsSectionTitles = [String](friendsDictionary.keys)
         friendsSectionTitles = friendsSectionTitles.sorted(by: { $0 < $1 })
-        
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

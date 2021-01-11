@@ -203,7 +203,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bl9-h9-roW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6524.6376811594209" y="-206.25"/>
+            <point key="canvasLocation" x="6209" y="-206"/>
         </scene>
         <!--Друзья-->
         <scene sceneID="B0L-ww-Nse">
@@ -273,7 +273,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E5a-dF-9zE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5676.811594202899" y="-206.25"/>
+            <point key="canvasLocation" x="5462" y="-206"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="wuP-6m-Ngj">
@@ -483,7 +483,7 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Виктор Мясоедов" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Utp-D1-gNl">
-                                        <rect key="frame" x="136.33333333333337" y="57.333333333333336" width="141.66666666666663" height="20.333333333333336"/>
+                                        <rect key="frame" x="130" y="57.333333333333336" width="141.66666666666663" height="20.333333333333336"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -491,11 +491,11 @@
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="1XF-Tt-EJa" firstAttribute="leading" secondItem="4uQ-XT-NHH" secondAttribute="leading" constant="20" symbolic="YES" id="39M-w7-cfj"/>
-                                    <constraint firstItem="Utp-D1-gNl" firstAttribute="centerX" secondItem="4uQ-XT-NHH" secondAttribute="centerX" id="3UO-xQ-r56"/>
                                     <constraint firstItem="1XF-Tt-EJa" firstAttribute="top" secondItem="4uQ-XT-NHH" secondAttribute="top" constant="25" id="9tM-70-xZH"/>
                                     <constraint firstItem="YLb-FM-vm9" firstAttribute="top" secondItem="4uQ-XT-NHH" secondAttribute="top" constant="25" id="d8B-p3-OeL"/>
                                     <constraint firstItem="Utp-D1-gNl" firstAttribute="centerY" secondItem="YLb-FM-vm9" secondAttribute="centerY" id="och-hr-kbm"/>
                                     <constraint firstItem="YLb-FM-vm9" firstAttribute="leading" secondItem="4uQ-XT-NHH" secondAttribute="leading" constant="20" symbolic="YES" id="tEw-lc-z9c"/>
+                                    <constraint firstItem="Utp-D1-gNl" firstAttribute="leading" secondItem="1XF-Tt-EJa" secondAttribute="trailing" constant="25" id="taV-0w-Toi"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -515,7 +515,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3r-G1-kLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5676.811594202899" y="-875.22321428571422"/>
+            <point key="canvasLocation" x="5461" y="-876"/>
         </scene>
         <!--Друзья-->
         <scene sceneID="Ssd-7C-iY5">
@@ -572,7 +572,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TSw-De-i5g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5676.811594202899" y="555.80357142857144"/>
+            <point key="canvasLocation" x="4738" y="555"/>
         </scene>
         <!--Контакты-->
         <scene sceneID="yZ8-SX-zBQ">
@@ -679,11 +679,11 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6524.6376811594209" y="555.97826086956525"/>
+            <point key="canvasLocation" x="5464" y="556"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="zwk-sy-r1u"/>
+        <segue reference="KYy-fM-b19"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="circles.hexagongrid" catalog="system" width="128" height="112"/>
