@@ -1,2 +1,2 @@
-# vk-client
+# Alternate
 Client for social network
