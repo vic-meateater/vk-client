@@ -81,13 +81,17 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
     }
     
     @IBAction func alphbeticSearchCnanged(_ sender: AlphabeticSearchUIControl) {
-        let indexPath = IndexPath(row: 0, section: friendsSectionTitles.firstIndex(of: sender.choosedLetter) ?? 0)
+        let indexPath = IndexPath(row: 0, section: friendsSectionTitles.firstIndex(of: sender.choosedLetter ?? "") ?? 0)
         tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
         
     }
     
-    @IBAction func drugAlphabrticSearchView(_ sendex: UIGestureRecognizer){
-        print(#function)
+    @IBAction func dragAlphabeticSearchView(_ sender: UIGestureRecognizer){
+        let scrollPosition = sender.location(in: alphabeticSearchBar)
+        let coef = Int(alphabeticSearchBar.frame.height) / friendsSectionTitles.count
+        let letterIndex = Int(scrollPosition.y) / coef
+        
+        alphabeticSearchBar.choosedLetter = friendsSectionTitles[letterIndex]
     }
     
     

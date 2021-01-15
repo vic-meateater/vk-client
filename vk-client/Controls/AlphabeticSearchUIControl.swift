@@ -10,9 +10,15 @@ import UIKit
 class AlphabeticSearchUIControl: UIControl {
 
     var letters = [String]()
-    var choosedLetter = ""
+    
     private var letterButtons = [UIButton]()
     private var stackView = UIStackView()
+    
+    var choosedLetter: String? = nil {
+        didSet{
+            sendActions(for: .valueChanged)
+        }
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
