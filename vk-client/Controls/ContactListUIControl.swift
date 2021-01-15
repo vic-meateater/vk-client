@@ -55,8 +55,9 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
         if let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ContactsTableViewCell{
             let friendKey = friendsSectionTitles[indexPath.section]
             if let friendValues = friendsDictionary[friendKey]{
-                cell.contactName.text = friendValues[indexPath.row].name
-                cell.contactImageView.image = UIImage(named: friendValues[indexPath.row].avatar)
+                //cell.contactName.text = friendValues[indexPath.row].name
+                //cell.contactImageView.image = UIImage(named: friendValues[indexPath.row].avatar)
+                cell.set(friendValues: friendValues[indexPath.row])
             }
             return cell
         }
