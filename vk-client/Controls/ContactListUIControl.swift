@@ -13,13 +13,7 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
     @IBOutlet weak var alphabeticSearchBar: AlphabeticSearchUIControl!
     
     var friends: [friend]!
-//    {
-//        didSet {
-//            tableView.reloadData()
-//        }
-//    }
     var friendsDictionary = [String: [friend]]()
-
     var friendsSectionTitles = [String]()    
     var friendImage: UIImage!
     var friendsDataSource: FriendsDataSource!
@@ -56,21 +50,12 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        if searchedFriends.isEmpty{
-            return friendsSectionTitles.count
-        }else{
-            return 1
-        }
+        return searchedFriends.isEmpty ? friendsSectionTitles.count : 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         guard let countFriendsInSection = friendsDictionary[friendsSectionTitles[section]]?.count else { return 0 }
-        if searchedFriends.isEmpty{
-            return countFriendsInSection
-        }else{
-            return searchedFriends.count
-        }
-        //TODO: тут поставить проверку на кол-во секций
+        return searchedFriends.isEmpty ? countFriendsInSection : searchedFriends.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -78,10 +63,7 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
             var friendValues: friend? = nil
             let friendKey = friendsSectionTitles[indexPath.section]
             if searchedFriends.isEmpty {
-                
                 friendValues = friendsDictionary[friendKey]?[indexPath.row]
-                    //cell.contactName.text = friendValues[indexPath.row].name
-                    //cell.contactImageView.image = UIImage(named: friendValues[indexPath.row].avatar)
             }else{
                 friendValues = searchedFriends[indexPath.row]
             }
@@ -91,15 +73,27 @@ class ContactListUIControl: UIViewController, UITableViewDataSource, UITableView
         return UITableViewCell()
     }
     
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return friendsSectionTitles[section]
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let label = UILabel()
+        label.textColor = .black
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        let uiView = UIView()
+        uiView.backgroundColor = .systemGray2
+        uiView.layer.opacity = 0.6
+        uiView.addSubview(label)
+
+        NSLayoutConstraint.activate([
+            label.leadingAnchor.constraint(equalTo: uiView.safeAreaLayoutGuide.leadingAnchor, constant: 15),
+            label.centerYAnchor.constraint(equalTo: uiView.centerYAnchor)
+        ])
+        if searchedFriends.isEmpty {
+            label.text = friendsSectionTitles[section]
+        }else{
+            label.text = "Лучшие совпадения"
+        }
+        return uiView
     }
-    //    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-    //        //tableView.backgroundView?.backgroundColor = .black
-    //        tableView.tableHeaderView?.backgroundColor = .black
-    //        let header = tableView.dequeueReusableHeaderFooterView(withIdentifier: HeaderViewForCell.identifier) as! HeaderViewForCell
-    //        return header
-    //    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "fromCustomContactsVC"{
@@ -137,14 +131,7 @@ extension ContactListUIControl: UISearchBarDelegate {
         guard let searchText = searchBar.text else {
             return
         }
-        
-        //friends = friendsDictionary.filter { $0.name.lowercased().contains(searchText.lowercased()) }
-        //friendsDictionary = Dictionary(grouping: friends, by: { String($0.name.contains(searchText)) })
-        searchedFriends = friends.filter {$0.name.contains(searchText)}
-        
-        //tableView.reloadData()
-        print(searchedFriends)
-        
+        searchedFriends = friends.filter {$0.name.lowercased().contains(searchText.lowercased())}
     }
     
     func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
@@ -158,9 +145,9 @@ extension ContactListUIControl: UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         view.endEditing(true)
     }
-    
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        print(searchBar.text)
-        print(#function)
+        searchBar.text = nil
+        searchedFriends = [friend]()
+        view.endEditing(true)
     }
 }

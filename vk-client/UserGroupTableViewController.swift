@@ -14,7 +14,7 @@ class UserGroupTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        userGroups = [group(name: "GB_iOS", image: "group_ios")]
+        userGroups = [group(name: "iOS_GB", image: "group_ios")]
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -55,10 +55,19 @@ class UserGroupTableViewController: UITableViewController {
         guard let tableViewController = segue.source as? GlobalGroupsTableViewController,
               let indexPath = tableViewController.tableView.indexPathForSelectedRow else {return}
         
-        let group = tableViewController.groups[indexPath.row]
-        if userGroups.contains(where: {$0.name == group.name }){return}
+        let groupKey = tableViewController.groupsSectionTitles[indexPath.section]
+        let group = tableViewController.groupsDictionary[groupKey]?[indexPath.row]
+        let searchedGroup = tableViewController.searchedGroups
+        
+        
         tableViewController.groups.remove(at: indexPath.row)
-        userGroups.append(group)
+        if searchedGroup.isEmpty {
+            if userGroups.contains(where: {$0.name == group?.name }){return}
+            userGroups.append(group!)
+        }else{
+            if userGroups.contains(where: {$0.name ==  searchedGroup[indexPath.row].name}){return}
+            userGroups.append(contentsOf: searchedGroup)
+        }
         tableView.reloadData()
     }
 }
