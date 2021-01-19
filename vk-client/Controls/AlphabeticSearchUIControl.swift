@@ -35,6 +35,7 @@ class AlphabeticSearchUIControl: UIControl {
             button.addTarget(self, action: #selector(selectLetter(_:)), for: .touchUpInside)
             letterButtons.append(button)
         }
+        
         stackView.removeFromSuperview()
         stackView = UIStackView(arrangedSubviews: letterButtons)
         

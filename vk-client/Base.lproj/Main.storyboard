@@ -290,6 +290,7 @@
                         <segue destination="p7J-jn-K5A" kind="relationship" relationship="viewControllers" id="6Ta-8W-d0g"/>
                         <segue destination="cO6-PS-RYd" kind="relationship" relationship="viewControllers" id="1GC-qv-Nmo"/>
                         <segue destination="YIx-lF-EDl" kind="relationship" relationship="viewControllers" id="UgK-lH-rYn"/>
+                        <segue destination="XQa-rf-Ewu" kind="relationship" relationship="viewControllers" id="OlM-Fn-bRc"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K5t-cs-obr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -522,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d3r-G1-kLx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5461" y="-876"/>
+            <point key="canvasLocation" x="6368.115942028986" y="-876.35869565217399"/>
         </scene>
         <!--Друзья-->
         <scene sceneID="Ssd-7C-iY5">
@@ -560,7 +561,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k4T-qk-p6O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4738" y="-875"/>
+            <point key="canvasLocation" x="5644.9275362318849" y="-875.54347826086962"/>
         </scene>
         <!--Контакты-->
         <scene sceneID="S7f-Ji-2DF">
@@ -695,6 +696,62 @@
             </objects>
             <point key="canvasLocation" x="5464" y="556"/>
         </scene>
+        <!--Новости-->
+        <scene sceneID="mmM-dO-5U3">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="XQa-rf-Ewu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Новости" image="newspaper" catalog="system" id="E8T-nG-KCg"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="rEo-to-lSR"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o3V-Me-jKe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="jUm-PH-QrE" kind="relationship" relationship="rootViewController" id="NRN-BO-FMz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NZ4-Ho-rEx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3919" y="-1148"/>
+        </scene>
+        <!--News Collection View Controller-->
+        <scene sceneID="8vg-5t-xli">
+            <objects>
+                <collectionViewController id="jUm-PH-QrE" customClass="NewsCollectionViewController" customModule="vk_client" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="auA-Zb-q5v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="layoutMargins" id="OBB-lZ-aH3">
+                            <size key="itemSize" width="400" height="750"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="u2E-6D-0dF">
+                                <rect key="frame" x="7" y="8" width="400" height="620"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="620"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                                <size key="customSize" width="400" height="620"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="jUm-PH-QrE" id="ei1-8k-5u2"/>
+                            <outlet property="delegate" destination="jUm-PH-QrE" id="zjj-bB-awK"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="6j9-ll-Bot"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u59-w6-NgG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4738" y="-1149"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="zwk-sy-r1u"/>
@@ -705,6 +762,7 @@
         <image name="group_ios" width="640" height="640"/>
         <image name="logo" width="682" height="682"/>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="newspaper" catalog="system" width="128" height="108"/>
         <image name="person.2.circle" catalog="system" width="128" height="121"/>
         <image name="person.3" catalog="system" width="128" height="62"/>
         <image name="profile_image" width="128" height="128"/>
