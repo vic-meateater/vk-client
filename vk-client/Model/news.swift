@@ -8,9 +8,9 @@
 import UIKit
 
 struct news {
-    var name: String
-    var avatar: String
+    var name: String?
+    var avatar: String?
     var date: String? = "21.01.2001"
-    var newsImage: UIImage?
-    var newsText: String
+    var newsImage: String?
+    var newsText: String?
 }
