@@ -32,7 +32,7 @@ class LikerUIControl: UIControl {
 
     private func setupUI() {
         likeButton = UIButton(type: UIButton.ButtonType.system)
-        likeButton.tintColor = .black
+        likeButton.tintColor = .red
         likeButton.setBackgroundImage(UIImage(systemName: "suit.heart"), for: .normal)
         likeButton.addTarget(self, action: #selector(checkLike), for: .touchUpInside)
         addSubview(likeButton)
@@ -45,11 +45,20 @@ class LikerUIControl: UIControl {
             likeButton.setBackgroundImage(UIImage(systemName: "suit.heart.fill"), for: .normal)
             liked = true
         }else{
-            likeButton.tintColor = .black
+            likeButton.tintColor = .red
             likeButton.setBackgroundImage(UIImage(systemName: "suit.heart"), for: .normal)
             liked = false
         }
-        
+        UIView.animate(withDuration: 0.1,
+                       delay: 0,
+                       usingSpringWithDamping: 0.9,
+                       initialSpringVelocity: 0,
+                       options: [.autoreverse],
+                       animations: {
+                        self.likeButton.transform = CGAffineTransform(scaleX: 0.75, y: 0.75)
+        }, completion: { finished in
+            self.likeButton.transform = .identity
+        })
     }
     
     override func layoutSubviews() {

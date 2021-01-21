@@ -8,14 +8,11 @@
 import UIKit
 
 class CustomAvatarImageView: UIImageView {
-
+    
     override func layoutSubviews() {
         super.layoutSubviews()
-        
         layer.cornerRadius = frame.height / 2
-
     }
-
 }
 
 class ShadowAvatarImageView: UIImageView{
@@ -39,5 +36,4 @@ class ShadowAvatarImageView: UIImageView{
         layer.masksToBounds = false
         layer.cornerRadius = frame.height / 2
     }
-
 }

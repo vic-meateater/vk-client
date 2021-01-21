@@ -9,8 +9,9 @@ import UIKit
 
 class ContactsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var contactImageView: UIImageView!
+    @IBOutlet weak var avatar: RoundedAvatar!
     @IBOutlet weak var contactName: UILabel!
+
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,7 +20,7 @@ class ContactsTableViewCell: UITableViewCell {
     
     func set(friendValues: friend){
         self.contactName.text = friendValues.name
-        self.contactImageView.image = UIImage(named: friendValues.avatar)
+        self.avatar.image = UIImage(named: friendValues.avatar)
     }
 
 }

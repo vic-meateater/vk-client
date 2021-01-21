@@ -27,10 +27,10 @@ class NewsCollectionViewCell: UICollectionViewCell {
         newsAvatarImageView.image = UIImage(named: newsValues.avatar ?? "no_avatar")
         newsMainImage.image = UIImage(named: newsValues.newsImage ?? "no_image")
         newsTextView.text = newsValues.newsText
-        asdf(textView: newsTextView)
+        autoResizeTextViewHeight(textView: newsTextView)
     }
     
-    func asdf(textView: UITextView){
+    func autoResizeTextViewHeight(textView: UITextView){
         textView.translatesAutoresizingMaskIntoConstraints = true
         textView.isScrollEnabled = false
         textView.sizeToFit()
